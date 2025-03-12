@@ -55,7 +55,7 @@ npm run build
 
 
 
-1. Aggiungi la configurazione del browser-logger:
+1. Aggiungi la configurazione del browser-logger su vscode:
 ```json
 {
   "mcpServers": {
