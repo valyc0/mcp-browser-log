@@ -132,17 +132,28 @@ Il browser-logger MCP fornisce tre comandi principali:
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Test Console</title>
+    <title>Console Test</title>
 </head>
 <body>
-    <h1>Test Console</h1>
-    <button onclick="console.log('Button clicked!')">
-        Click Me
-    </button>
+    <h1>Console Test Page</h1>
+    <p>Check the browser console and MCP logger output</p>
+    <button onclick="writeMoreLogs()">Write More Logs</button>
+
     <script>
-        console.log("Pagina caricata");
-        console.warn("Questo è un warning");
-        console.error("Questo è un errore");
+        console.log("Hello from the console!");
+        console.warn("This is a warning message");
+        console.error("This is an error message");
+        
+        function writeMoreLogs() {
+            console.log("Button clicked at:", new Date().toISOString());
+            console.log({ data: "This is an object", value: 42 });
+            console.warn("Another warning");
+        }
+
+        // Write a log every 5 seconds
+        setInterval(() => {
+            console.log("Timestamp:", new Date().toISOString());
+        }, 5000);
     </script>
 </body>
 </html>
